@@ -16,6 +16,10 @@
 		<title>Frontend Mentor | Age calculator app</title>
 
 		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+			/* font-family: "Poppins", sans-serif; */
+			/* weights: 400i, 700, 800i */
+
 			:root {
 				--purple: hsl(259, 100%, 65%);
 				--light_red: hsl(0, 100%, 67%);
@@ -30,6 +34,7 @@
 				padding: 0;
 				margin: 0;
 				box-sizing: border-box;
+				font-family: 'Poppins', sans-serif;
 			}
 
 			body {
@@ -40,25 +45,61 @@
 				width: 100%;
 				height: 100vh;
 				background-color: var(--off_white);
+				font-size: 32px;
 			}
 
 			main {
 				background-color: var(--white);
 				padding: 3rem;
+				border-radius: 1rem 1rem 10rem 1rem;
+			}
+
+			.inputs {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: flex-start;
+			}
+
+			.containter_input {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				gap: 0.5rem;
+			}
+
+			.containter_input label {
+				font-size: 13px;
+				letter-spacing: 0.09rem;
+				color: var(--smokey_grey);
+				text-transform: uppercase;
 			}
 
 			footer {
 				position: absolute;
 				bottom: 0;
+				font-size: 12px;
 			}
 		</style>
 	</head>
 	<body>
 		<main>
-			<div>
-				<input type="text" />
-				<input type="text" />
-				<input type="text" />
+			<div class="inputs">
+				<div class="containter_input">
+					<label for="day">day</label>
+					<input type="number" name="day" id="day" />
+				</div>
+
+				<div class="containter_input">
+					<label for="month">month</label>
+					<input type="number" name="month" id="month" />
+				</div>
+
+				<div class="containter_input">
+					<label for="year">year</label>
+					<input type="number" name="year" id="year" />
+				</div>
 			</div>
 
 			<hr />
@@ -69,6 +110,7 @@
 				<p><strong></strong>days</p>
 			</div>
 		</main>
+
 		<footer class="attribution">
 			<p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
 			<p>Coded by <a href="https://github.com/RafaelHDSV" target="_blank">Rafael Henrique de Sousa Vieira</a>.</p>
