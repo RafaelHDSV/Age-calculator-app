@@ -217,6 +217,7 @@
 			let year = document.getElementById('year');
 			let type = document.querySelectorAll('#type');
 			let error = document.querySelectorAll('#error');
+			let ano = new Date();
 
 			button.addEventListener('click', () => {
 				if (day.value == '') {
@@ -261,13 +262,16 @@
 					error[2].innerHTML = '';
 				}
 
-				if (condition) {
+				if (day.value > 31) {
+					error[0].innerHTML = 'Must be a valid day';
 				}
 
-				if (condition) {
+				if (month > 12) {
+					error[1].innerHTML = 'Must be a valid month';
 				}
 
-				if (condition) {
+				if (year > ano.getFullYear) {
+					error[2].innerHTML = 'This field is required';
 				}
 			});
 		</script>
