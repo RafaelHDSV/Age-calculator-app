@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
--    Solution URL: https://www.frontendmentor.io/solutions/age-calculator-app-mKdODUZlTk
--    Live Site URL: https://age-calculator-app-rafael.netlify.app
+-    Solution URL: URL SOLUTION HERE
+-    Live Site URL: URL SITE HERE
 
 ### Screenshot
 
