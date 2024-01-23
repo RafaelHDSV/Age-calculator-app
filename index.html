@@ -97,6 +97,12 @@
 
 			.containter_input #error {
 				display: none;
+				font-family: 'Poppins', sans-serif;
+				letter-spacing: normal;
+				font-style: italic;
+				font-weight: 400;
+				text-transform: none;
+				color: var(--light_red);
 			}
 
 			.container_button {
@@ -166,21 +172,21 @@
 		<main>
 			<div class="inputs">
 				<div class="containter_input">
-					<label for="day">day</label>
+					<label id="type" for="day">day</label>
 					<input type="number" name="day" id="day" placeholder="DD" autocomplete="off" required />
-					<label id="error" for="day"></label>
+					<label id="error" for="day">This field is required</label>
 				</div>
 
 				<div class="containter_input">
-					<label for="month">month</label>
+					<label id="type" for="month">month</label>
 					<input type="number" name="month" id="month" placeholder="MM" autocomplete="off" required />
-					<label id="error" for="month"></label>
+					<label id="error" for="month">This field is required</label>
 				</div>
 
 				<div class="containter_input">
-					<label for="year">year</label>
+					<label id="type" for="year">year</label>
 					<input type="number" name="year" id="year" placeholder="YYYY" autocomplete="off" required />
-					<label id="error" for="year"></label>
+					<label id="error" for="year">This field is required</label>
 				</div>
 			</div>
 
@@ -209,35 +215,48 @@
 			let day = document.getElementById('day');
 			let month = document.getElementById('month');
 			let year = document.getElementById('year');
+			let type = document.querySelectorAll('#type');
 			let error = document.querySelectorAll('#error');
 
 			button.addEventListener('click', () => {
 				if (day.value == '') {
 					for (let i = 0; i < error.length; i++) {
+						type[0].style.color = 'var(--light_red)';
+						day.style.borderColor = 'var(--light_red)';
 						error[0].style.display = 'flex';
-						error[0].innerHTML = 'AAAAAAAAAA';
+						error[0].innerHTML = 'This field is required';
 					}
 				} else {
+					type[0].style.color = 'var(--smokey_grey)';
+					day.style.borderColor = 'var(--smokey_grey)';
 					error[0].style.display = 'none';
 					error[0].innerHTML = '';
 				}
 
 				if (month.value == '') {
 					for (let i = 0; i < error.length; i++) {
+						type[1].style.color = 'var(--light_red)';
+						month.style.borderColor = 'var(--light_red)';
 						error[1].style.display = 'flex';
-						error[1].innerHTML = 'AAAAAAAAAA';
+						error[1].innerHTML = 'This field is required';
 					}
 				} else {
+					type[1].style.color = 'var(--smokey_grey)';
+					month.style.borderColor = 'var(--smokey_grey)';
 					error[1].style.display = 'none';
 					error[1].innerHTML = '';
 				}
 
 				if (year.value == '') {
 					for (let i = 0; i < error.length; i++) {
+						type[2].style.color = 'var(--light_red)';
+						year.style.borderColor = 'var(--light_red)';
 						error[2].style.display = 'flex';
-						error[2].innerHTML = 'AAAAAAAAAA';
+						error[2].innerHTML = 'This field is required';
 					}
 				} else {
+					type[2].style.color = 'var(--smokey_grey)';
+					year.style.borderColor = 'var(--smokey_grey)';
 					error[2].style.display = 'none';
 					error[2].innerHTML = '';
 				}
