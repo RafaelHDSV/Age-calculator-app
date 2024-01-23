@@ -217,7 +217,7 @@
 			let year = document.getElementById('year');
 			let type = document.querySelectorAll('#type');
 			let error = document.querySelectorAll('#error');
-			let ano = new Date();
+			let thisYear = new Date();
 
 			button.addEventListener('click', () => {
 				if (day.value == '') {
@@ -263,15 +263,24 @@
 				}
 
 				if (day.value > 31) {
+					type[0].style.color = 'var(--light_red)';
+					day.style.borderColor = 'var(--light_red)';
+					error[0].style.display = 'flex';
 					error[0].innerHTML = 'Must be a valid day';
 				}
 
-				if (month > 12) {
+				if (month.value > 12) {
+					type[1].style.color = 'var(--light_red)';
+					month.style.borderColor = 'var(--light_red)';
+					error[1].style.display = 'flex';
 					error[1].innerHTML = 'Must be a valid month';
 				}
 
-				if (year > ano.getFullYear) {
-					error[2].innerHTML = 'This field is required';
+				if (year.value > thisYear.getFullYear()) {
+					type[2].style.color = 'var(--light_red)';
+					year.style.borderColor = 'var(--light_red)';
+					error[2].style.display = 'flex';
+					error[2].innerHTML = 'Must be in the past';
 				}
 			});
 		</script>
