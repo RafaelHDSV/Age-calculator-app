@@ -57,4 +57,4 @@ Users should be able to:
 -    CSS
 -    JAVASCRIPT
 
-[⬆ Back to the top](#Frontend Mentor - Age calculator app solution)<br>
+[⬆ Back to the top](#frontend-mentor---age-calculator-app-solution)<br>
