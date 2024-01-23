@@ -199,9 +199,9 @@
 			</div>
 
 			<div class="results">
-				<p><strong>--</strong>years</p>
-				<p><strong>--</strong>months</p>
-				<p><strong>--</strong>days</p>
+				<p><strong id="yearsResult">--</strong>years</p>
+				<p><strong id="monthsResult">--</strong>months</p>
+				<p><strong id="daysResult">--</strong>days</p>
 			</div>
 		</main>
 
@@ -215,11 +215,14 @@
 			let day = document.getElementById('day');
 			let month = document.getElementById('month');
 			let year = document.getElementById('year');
+			let daysResult = document.getElementById('daysResult');
+			let monthsResult = document.getElementById('monthsResult');
+			let yearsResult = document.getElementById('yearsResult');
 			let type = document.querySelectorAll('#type');
 			let error = document.querySelectorAll('#error');
 			let thisYear = new Date();
 
-			button.addEventListener('click', () => {
+			function confirmation() {
 				if (day.value == '') {
 					for (let i = 0; i < error.length; i++) {
 						type[0].style.color = 'var(--light_red)';
@@ -282,6 +285,10 @@
 					error[2].style.display = 'flex';
 					error[2].innerHTML = 'Must be in the past';
 				}
+			}
+
+			button.addEventListener('click', () => {
+				confirmation();
 			});
 		</script>
 	</body>
