@@ -90,6 +90,15 @@
 				padding: 0.5rem 1rem;
 			}
 
+			.containter_input input::placeholder {
+				color: var(--smokey_grey);
+				opacity: 0.7;
+			}
+
+			.containter_input #error {
+				display: none;
+			}
+
 			.container_button {
 				display: flex;
 				flex-direction: row;
@@ -158,32 +167,35 @@
 			<div class="inputs">
 				<div class="containter_input">
 					<label for="day">day</label>
-					<input type="number" name="day" id="day" />
+					<input type="number" name="day" id="day" placeholder="DD" autocomplete="off" required />
+					<label id="error" for="day"></label>
 				</div>
 
 				<div class="containter_input">
 					<label for="month">month</label>
-					<input type="number" name="month" id="month" />
+					<input type="number" name="month" id="month" placeholder="MM" autocomplete="off" required />
+					<label id="error" for="month"></label>
 				</div>
 
 				<div class="containter_input">
 					<label for="year">year</label>
-					<input type="number" name="year" id="year" />
+					<input type="number" name="year" id="year" placeholder="YYYY" autocomplete="off" required />
+					<label id="error" for="year"></label>
 				</div>
 			</div>
 
 			<div class="container_button">
 				<hr />
 
-				<button>
+				<button type="submit" id="button">
 					<img src="images/icon-arrow.svg" alt="icon-arrow.svg" />
 				</button>
 			</div>
 
 			<div class="results">
-				<p><strong>38</strong>years</p>
-				<p><strong>3</strong>months</p>
-				<p><strong>26</strong>days</p>
+				<p><strong>--</strong>years</p>
+				<p><strong>--</strong>months</p>
+				<p><strong>--</strong>days</p>
 			</div>
 		</main>
 
@@ -191,5 +203,45 @@
 			<p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</p>
 			<p>Coded by <a href="https://github.com/RafaelHDSV" target="_blank">Rafael Henrique de Sousa Vieira</a>.</p>
 		</footer>
+
+		<script>
+			let button = document.getElementById('button');
+			let day = document.getElementById('day');
+			let month = document.getElementById('month');
+			let year = document.getElementById('year');
+			let error = document.querySelectorAll('#error');
+
+			button.addEventListener('click', () => {
+				if (day.value == '') {
+					for (let i = 0; i < error.length; i++) {
+						error[0].style.display = 'flex';
+						error[0].innerHTML = 'AAAAAAAAAA';
+					}
+				} else {
+					error[0].style.display = 'none';
+					error[0].innerHTML = '';
+				}
+
+				if (month.value == '') {
+					for (let i = 0; i < error.length; i++) {
+						error[1].style.display = 'flex';
+						error[1].innerHTML = 'AAAAAAAAAA';
+					}
+				} else {
+					error[1].style.display = 'none';
+					error[1].innerHTML = '';
+				}
+
+				if (year.value == '') {
+					for (let i = 0; i < error.length; i++) {
+						error[2].style.display = 'flex';
+						error[2].innerHTML = 'AAAAAAAAAA';
+					}
+				} else {
+					error[2].style.display = 'none';
+					error[2].innerHTML = '';
+				}
+			});
+		</script>
 	</body>
 </html>
