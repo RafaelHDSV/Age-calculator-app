@@ -1,21 +1,21 @@
-# NAME_OF_REPOSITORY
+# Frontend Mentor - Age calculator app solution
 
-![GitHub repo size](https://img.shields.io/github/repo-size/RafaelHDSV/NAME_OF_REPOSITORY?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/RafaelHDSV/NAME_OF_REPOSITORY?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/RafaelHDSV/NAME_OF_REPOSITORY?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/RafaelHDSV/Age-calculator-app?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/RafaelHDSV/Age-calculator-app?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/RafaelHDSV/Age-calculator-app?style=for-the-badge)
 
-<img src="bg.jpg" alt="bg.jpg">
+<img src="images/desktop.png" alt="desktop.png">
 
-> DESCRIPTION HERE: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+> This is a solution to the [Age calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Links](#links)
-  - [Screenshot](#screenshot)
-- [My process](#my-process)
-  - [Built with](#built-with)
+-    [Overview](#overview)
+     -    [The challenge](#the-challenge)
+     -    [Links](#links)
+     -    [Screenshot](#screenshot)
+-    [My process](#my-process)
+     -    [Built with](#built-with)
 
 ## Overview
 
@@ -23,41 +23,38 @@
 
 Users should be able to:
 
-- DESCRIPTION OF WHAT THE USER CAN DO
-<!--- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Add new todos to the list
-- Mark todos as complete
-- Delete todos from the list
-- Filter by all/active/complete todos
-- Clear all completed todos
-- Toggle light and dark mode
-- **Bonus**: Drag and drop to reorder items on the list-->
+-    View an age in years, months, and days after submitting a valid date through the form
+-    Receive validation errors if:
+     -    Any field is empty when the form is submitted
+     -    The day number is not between 1-31
+     -    The month number is not between 1-12
+     -    The year is in the future
+     -    The date is invalid e.g. 31/04/1991 (there are 30 days in April)
+-    View the optimal layout for the interface depending on their device's screen size
+-    See hover and focus states for all interactive elements on the page
+-    **Bonus**: See the age numbers animate to their final number when the form is submitted
 
 ### Links
 
-- Solution URL: URL SOLUTION HERE
-- Live Site URL: URL SITE HERE
+-    Solution URL: URL SOLUTION HERE
+-    Live Site URL: URL SITE HERE
 
 ### Screenshot
 
-  - Desktop
-  
-    ![](bg.jpg)
-    
-  - Mobile
-    
-    <img src="bg.jpg" alt="bg.jpg" width="300px" height="700px">
+-    Desktop
+
+     ![](images/desktop.png)
+
+-    Mobile
+
+     <img src="images/mobile.png" alt="mobile.png" width="300px" height="700px">
 
 ## My process
 
 ### Built with
 
-- DESCRIPTION OF LANGUAGE
-<!--- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Javascript properties-->
+-    HTML
+-    CSS
+-    JAVASCRIPT
 
-[⬆ Back to the top](#name_of_repository)<br>
+[⬆ Back to the top](#Frontend Mentor - Age calculator app solution)<br>
