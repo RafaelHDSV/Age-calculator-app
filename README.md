@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
--    Solution URL: URL SOLUTION HERE
--    Live Site URL: URL SITE HERE
+-    Solution URL: https://github.com/RafaelHDSV/Age-calculator-app
+-    Live Site URL: https://age-calculator-app-rafael.netlify.app
 
 ### Screenshot
 
