@@ -156,12 +156,13 @@ main {
 }
 
 footer {
-	position: absolute;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	bottom: 1rem;
+	margin-top: 1.5rem;
+	padding-bottom: 1rem;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 12px;
 	font-weight: 100;
